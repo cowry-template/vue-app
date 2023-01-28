@@ -1,0 +1,180 @@
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.alignc {
+  text-align: center;
+}
+
+.alignl {
+  text-align: left;
+}
+
+.alignr {
+  text-align: right;
+}
+.alignm {
+  vertical-align: middle;
+}
+.iblock {
+  display: inline-block !important;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.posr {
+  position: relative;
+}
+
+.posa {
+  position: absolute;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  &.column,
+  &.col {
+    flex-direction: column;
+  }
+  &.between {
+    justify-content: space-between;
+  }
+  &.end {
+    justify-content: flex-end;
+  }
+  &.vtop {
+    align-items: flex-start;
+  }
+  &.vbottom {
+    align-items: flex-end;
+  }
+  &.vcenter {
+    align-items: center;
+  }
+  &.hcenter {
+    justify-content: center;
+  }
+  &.around {
+    justify-content: space-around;
+  }
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  &.stretch {
+    align-items: stretch;
+  }
+}
+.shrink0 {
+  flex-shrink: 0;
+}
+.flex1 {
+  flex: 1;
+}
+.flex2 {
+  flex: 2;
+}
+.flex3 {
+  flex: 3;
+}
+
+
+.w100 {
+  width: 100px !important;
+}
+.w200 {
+  width: 200px !important;
+}
+.w300 {
+  width: 300px !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+.bolder {
+  font-weight: bolder;
+}
+@for $i from 0 through 30 {
+  // max 60
+  $v: 2;
+  .font#{12 + $v * $i} {
+    font-size: #{12 + $v * $i}px !important;
+  }
+}
+@for $i from 0 through 20 {
+  $v: 5;
+
+  .mt#{$v * $i} {
+    margin-top: #{$v * $i}px !important;
+  }
+
+  .mb#{$v * $i} {
+    margin-bottom: #{$v * $i}px !important;
+  }
+
+  .ml#{$v * $i} {
+    margin-left: #{$v * $i}px !important;
+  }
+
+  .mr#{$v * $i} {
+    margin-right: #{$v * $i}px !important;
+  }
+
+  .pt#{$v * $i} {
+    padding-top: #{$v * $i}px !important;
+  }
+
+  .pb#{$v * $i} {
+    padding-bottom: #{$v * $i}px !important;
+  }
+
+  .pl#{$v * $i} {
+    padding-left: #{$v * $i}px !important;
+  }
+
+  .pr#{$v * $i} {
+    padding-right: #{$v * $i}px !important;
+  }
+}
+
+.line1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@for $i from 2 through 10 {
+  .line#{$i} {
+    display: -webkit-box;
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: #{$i};
+    overflow: hidden;
+  }
+}
+
+
