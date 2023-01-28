@@ -58,7 +58,7 @@ const handlerError = (error) => {
 };
 
 const request = axios.create({
-  baseURL: process.env.VUE_APP_BASE_URL,
+  baseURL: process.env.VITE_APP_BASE_API,
   timeout: 50000,
 });
 
